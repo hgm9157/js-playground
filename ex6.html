@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8">
+    </head>
+    <script>
+        var array = ["네이버","다음","네이트","구글"];
+    </script>
+    <body>
+        <h1>go web page</h1>
+        <h2>sites</h2>
+        <ul>
+        <script>
+            for(var i = 0; i < array.length; i++) {
+                if (array[i] === "네이버"){
+                    document.write('<li><a href = "https://naver.com" target = "_blank">'+array[i]+'</a></li>');
+                }else if (array[i] === "다음"){
+                    document.write('<li><a href = "https://daum.net" target = "_blank">'+array[i]+'</a></li>');
+                }else if (array[i] === "네이트"){
+                    document.write('<li><a href = "https://nate.com" target = "_blank">'+array[i]+'</a></li>');
+                }else if (array[i] === "구글"){
+                    document.write('<li><a href = "https://google.com" target = "_blank">'+array[i]+'</a></li>');
+                }
+            }
+        </script>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <body>
+       
+        <script>
+            numbers = {};
+            numbers.mem = [];
+            numbers.prime = [];
+
+            numbers.isprime = function(number) {
+                for (var i = 2; i<number; i++){
+                    if(number%i == 0){
+                        return false;
+                    }
+                }
+                return true;
+            };
+
+            numbers.putnum = function(number){
+                for (var i = 1; i<= number; i++){
+                    numbers.mem.push(i);
+                }
+            };
+
+            numbers.putnum(10000);
+
+
+            numbers.calc = function(){
+                for (var i = 0; i<= numbers.mem.length; i++){
+                    if(numbers.isprime(numbers.mem[i])){
+                        numbers.prime.push(i);
+                    }
+                }
+            };
+
+            numbers.getAllprime = function () {
+                for (var i = 0; i < this.prime.length; i++){
+                    document.write("<li> 소수 ->"+this.prime[i]+"</li>");
+                }
+            }
+            numbers.calc();
+            numbers.getAllprime();
+            
+
+        </script>
+    </body>
+</html>

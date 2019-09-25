@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>함수로 구구단 구현하기</h1>
+        <script>
+            var obj99dan = {};
+            obj99dan.arr = [];
+
+            obj99dan.main = function(){
+                for (var i = 0; i <= 9; i++){
+                    obj99dan.arr[i] = new Array();
+                }
+                
+                obj99dan.calc();
+                this.print();
+            };
+
+            obj99dan.print = function(){
+                for (var i = 2; i <= 9; i++){
+                    document.write("<h2>"+i+"단 </h2>");
+                    for (var j = 1; j <= 9; j++){
+                        var str = "";
+                        str += i;
+                        str += " X ";
+                        str += j;
+                        str += " = ";
+                        document.write("<li>"+str+obj99dan.arr[i][j]+"<br></li>");
+                        
+                    }
+                }
+            };
+
+            obj99dan.calc = function(){
+                for (var i = 2; i <= 9; i++){
+                    for (var j = 1; j <= 9; j++){
+                        obj99dan.arr[i][j] = i * j; 
+                    }
+                }
+            };
+
+            obj99dan.main();
+        </script>
+    </body>
+</html>
